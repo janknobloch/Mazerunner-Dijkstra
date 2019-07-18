@@ -146,7 +146,7 @@ public class MazeView {
 			}
 		}
 
-		System.out.println(m.board.length);
+		
 		gamePanel.validate();
 		gamePanel.repaint();
 		f.validate();

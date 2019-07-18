@@ -15,15 +15,15 @@ import model.graph.Node;
 
 public class Dijkstra {
 
-	private List<Node> nodes = null;
-	private List<Edge> edges = null;
+	private Set<Node> nodes = null;
+	private Set<Edge> edges = null;
 	Set<Node> settledNodes;
 	Set<Node> unSettledNodes;
 	Map<Node, Node> predecessors;
-	Map<Node, Integer> distance;
+	Map<Node, Integer> distance; 
 	private boolean wallbreak;
 
-	public Dijkstra(List<Node> nodes, List<Edge> edge, boolean wallbreak) {
+	public Dijkstra(Set<Node> nodes, Set<Edge> edge, boolean wallbreak) {
 		this.nodes = nodes;
 		this.edges = edge;
 		this.wallbreak = wallbreak;
@@ -49,7 +49,7 @@ public class Dijkstra {
 	 * finds the minimal distances from adjecent nodes if a new minimum is found the
 	 * map is updated with the same node and the new distance value when a minimum
 	 * is found it is added to the predecessors list and its target is added to the
-	 * unsetteld nodes again.
+	 * unsetteled nodes again.
 	 * 
 	 * @param node
 	 */
